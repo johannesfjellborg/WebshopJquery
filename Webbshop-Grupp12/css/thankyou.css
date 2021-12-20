@@ -1,0 +1,188 @@
+* {  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+body {
+    font-family: 'Maven Pro', sans-serif;
+    overflow-x: hidden; 
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(125, 148, 135);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: black;
+}
+
+.logo {
+    font-family: 'Monofett', cursive;
+    font-size: 40px;
+    line-height: 2rem;
+    color: black;
+}
+
+.fa-bars, .fa-times {
+    font-size: 21px;
+}
+
+header .headerColumn {
+    flex: 1;
+    text-align: center;
+}
+
+.dropdownMenu .dropdownMenuList {
+	display: none;
+	padding: 0px;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	width: 100%;
+	background-color: rgb(125, 148, 135);
+	border-top: 1px solid black;
+}
+
+.dropdownMenu .dropdownMenuList li {
+    display: flex;
+    justify-content: center;
+	border-bottom: 1px solid black;
+}
+
+.dropdownMenu .dropdownMenuList li a {
+	padding: 10px;
+}
+
+.dropdownMenu .dropdownMenuList li a:hover {
+	color: black;
+	font-weight: bold;
+}
+
+.dropdownMenu .dropdownMenuList.show {
+    display: flex;
+    flex-direction: column;
+}
+
+#showOnDesktop {
+    display: none;
+}
+
+#cart {
+    font-size: 1.3rem;
+}
+
+/* Thank you message */
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.thankYou {
+    margin-top: 70px;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+.order {
+    margin-top: 10px;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+}
+
+img {
+    margin-top: 70px;
+    width: 70%;
+    height: 70%;
+}
+
+/* Footer */
+footer {
+    height: 100px;
+    background-color: rgb(125, 148, 135);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+  /* Kolumn vid större skärm om vi behöver det nu */
+@media screen and (min-width: 1024px) {
+    header {
+        flex-direction: row;
+        font-size: 1.3rem;
+    }
+
+    header > ul > li {
+        margin-right: 10px;
+    }
+
+    header > ul > li > i {
+        font-size: 1.5rem;
+    }
+
+    header > ul > li > a > i {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        font-size: 3rem;
+    }
+
+    .fa-bars, .fa-search, .fa-shopping-cart {
+        font-size: 26px;
+    }
+
+    #hideOnDesktop {
+        display: none;
+    }
+
+    #showOnDesktop {
+        display: block;
+    }
+
+    img {
+        margin-top: 50px;
+        width: 20%;
+        height: 20%;
+    }
+
+    footer {
+        flex-direction: row;
+        height: 100px;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+}

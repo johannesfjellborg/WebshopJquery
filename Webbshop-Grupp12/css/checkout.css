@@ -1,0 +1,277 @@
+* {  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+body {
+    font-family: 'Maven Pro', sans-serif;
+    overflow-x: hidden; 
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(125, 148, 135);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: black;
+}
+
+.logo {
+    font-family: 'Monofett', cursive;
+    font-size: 40px;
+    line-height: 2rem;
+    color: black;
+}
+
+.fa-bars, .fa-times {
+    font-size: 21px;
+}
+
+header .headerColumn {
+  flex: 1;
+  text-align: center;
+}
+
+.dropdownMenu .dropdownMenuList {
+	display: none;
+	padding: 0px;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	width: 100%;
+	background-color: rgb(125, 148, 135);
+	border-top: 1px solid black;
+}
+
+.dropdownMenu .dropdownMenuList li {
+    display: flex;
+    justify-content: center;
+	border-bottom: 1px solid black;
+}
+
+.dropdownMenu .dropdownMenuList li a {
+	padding: 10px;
+}
+
+.dropdownMenu .dropdownMenuList li a:hover {
+	color: black;
+	font-weight: bold;
+}
+
+.dropdownMenu .dropdownMenuList.show {
+    display: flex;
+    flex-direction: column;
+}
+
+#showOnDesktop {
+    display: none;
+}
+
+#cart {
+    font-size: 1.3rem;
+}
+
+/* Checkout Content */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.buttonFlex1 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonFlex1 > button {
+    padding: 10px 20px;
+    border: none;
+    background: rgb(248, 198, 180);
+    color: black;
+    margin: 20px 20px 0 0;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.buttonFlex1 > button:hover {
+    background-color: rgb(240, 207, 195);
+}
+
+.cartInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 20px 0;
+    padding: 30px 0;
+    border: 3px solid lightgrey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cartInfo > p {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.summary > div {
+    display: flex;
+    margin-top: 15px;
+}
+
+.productPrice {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.totalSum {
+    margin-right: 10px;
+    text-decoration: underline;
+}
+
+.totalSumNr {
+    font-weight: bold;
+}
+
+.checkoutForm {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 20px 0;
+}
+
+.checkoutForm > label {
+    margin-top: 15px;
+}
+
+.checkoutForm > input {
+    height: 25px;
+    margin: 5px 0;
+    background-color: rgb(245, 245, 245);
+    border: 2px solid lightgrey;
+}
+
+.buttonFlex2 {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonFlex2 > button {
+    padding: 10px 30px;
+    border: none;
+    background: rgb(248, 198, 180);
+    color: black;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+}
+
+.buttonFlex2 > button:hover {
+    background-color: rgb(240, 207, 195);
+}
+
+/* Footer */
+footer {
+    height: 100px;
+    background-color: rgb(125, 148, 135);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Kolumn vid större skärm om vi behöver det nu */
+@media screen and (min-width: 1024px) {
+    header {
+        flex-direction: row;
+        font-size: 1.2rem;
+    }
+
+    header > ul > li {
+        margin-right: 10px;
+    }
+  
+    header > ul > li > i {
+        font-size: 1.5rem;
+    }
+
+    header > ul > li > a > i {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        font-size: 3rem;
+    }
+
+    .fa-bars, .fa-search, .fa-shopping-cart {
+        font-size: 26px;
+    }
+
+    #hideOnDesktop {
+        display: none;
+    }
+
+    #showOnDesktop {
+        display: block;
+    }
+
+    section {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .cartInfo {
+        width: 30%;
+        font-size: 1.3rem;
+        padding: 60px 0;
+        margin-top: 50px;
+    }
+
+    .cartInfo > p {
+        font-size: 1.8rem;
+    }
+
+    .checkoutForm {
+        width: 30%;
+    }
+
+    footer {
+        flex-direction: row;
+        height: 100px;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+}
